@@ -5,7 +5,7 @@ const noMessages = [
   "Heyyy 🙈 don’t be shy",
   "Are you sure? 🥹",
   "My heart says YES 💖",
-  "Viniiii 😭",
+  "Pariiii 😭",
   "Okay okay… I know it’s YES 😍"
 ];
 
@@ -147,10 +147,10 @@ function burstHearts(btn) {
 
 // Slideshow
 const memoryImages = [
-  "assets/memories/1.jpeg",
-  "assets/memories/2.jpeg",
-  "assets/memories/3.jpeg",
-  "assets/memories/4.jpeg"
+  "assets/memories/1.png",
+  "assets/memories/2.png",
+  "assets/memories/3.png",
+  "assets/memories/4.png"
 ];
 
 let currentSlide = 0;
