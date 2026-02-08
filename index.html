@@ -18,6 +18,7 @@
 <!-- Music Toggle -->
 <div class="music-btn" onclick="toggleMusic()">🎵</div>
 
+<!-- PAGE 1 -->
 <section id="page1" class="page">
   <div class="content">
     <h1>Hey Vini 🐻💖</h1>
@@ -26,17 +27,22 @@
   </div>
 </section>
 
+<!-- PAGE 2 -->
 <section id="page2" class="page hidden">
   <div class="content">
     <h1 class="typing" data-text="Vini 💕"></h1>
     <p class="typing" data-text="Will you be my Valentine? 🌸"></p>
+
     <div class="btn-row">
-      <button class="yes" onclick="goToPage3()">Yes 😍</button>
+      <button class="yes" id="yesBtn" onclick="goToYesFlow()">Yes 😍</button>
       <button class="no" id="noBtn">No 🙈</button>
     </div>
+
+    <div id="noMessage" class="no-message hidden"></div>
   </div>
 </section>
 
+<!-- PAGE 3 -->
 <section id="page3" class="page hidden">
   <div class="content">
     <h1 class="typing" data-text="Yayyyy 🎉💖"></h1>
@@ -45,24 +51,19 @@
   </div>
 </section>
 
-<!-- Love Letter Page -->
+<!-- PAGE 4 -->
 <section id="page4" class="page hidden">
   <div class="content">
     <h1 class="typing" data-text="Hey Vini 💕"></h1>
-
     <p class="typing" data-text="I just want you to know something…"></p>
-
     <p class="typing" data-text="You make my normal days happier, my smiles wider, and my heart feel full 🥰"></p>
-
     <p class="typing" data-text="I don’t promise perfection, but I promise laughs, silly moments, and lots of love 💖"></p>
-
     <p class="typing" data-text="So yes… this is me saying — I choose you, today and always 🌸"></p>
-
     <p class="signature typing" data-text="— Yours, Rishabh 🐻"></p>
   </div>
 </section>
 
-<!-- Memory Slideshow Page -->
+<!-- PAGE 5 -->
 <section id="page5" class="page hidden slideshow-page">
   <div class="slideshow-bg"></div>
 
@@ -72,8 +73,6 @@
     <p class="typing" data-text="Happy Valentine’s — from Rishabh 💖"></p>
   </div>
 </section>
-
-
 
 <script src="script.js"></script>
 </body>
