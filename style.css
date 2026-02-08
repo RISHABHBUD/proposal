@@ -51,22 +51,26 @@ button {
   background: #fff;
   color: #ee9ca7;
   font-weight: 600;
+  transition: transform 0.3s ease;
 }
 
 .btn-row {
   display: flex;
-  gap: 15px;
+  gap: 16px;
   justify-content: center;
+  position: relative;
 }
 
 .yes {
   background: #ff6f91;
   color: #fff;
+  z-index: 2;
 }
 
 .no {
   background: #ffc1cc;
   color: #fff;
+  z-index: 1;
 }
 
 /* Image */
@@ -130,38 +134,74 @@ img {
   font-size: 1.1rem;
 }
 
-/* Slideshow Background */
+/* NO message */
+.no-message {
+  margin-top: 18px;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255,255,255,0.25);
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.pop {
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.85); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* YES glow */
+.glow {
+  animation: glowPulse 1.5s infinite;
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 5px #ff6f91; }
+  50% { box-shadow: 0 0 20px #ff6f91; }
+  100% { box-shadow: 0 0 5px #ff6f91; }
+}
+
+/* Heart burst */
+.burst {
+  position: fixed;
+  animation: burstUp 1.2s ease-out;
+}
+
+@keyframes burstUp {
+  from { transform: translateY(0) scale(1); opacity: 1; }
+  to { transform: translateY(-60px) scale(1.5); opacity: 0; }
+}
+
+/* Slideshow */
 .slideshow-page {
   position: relative;
-  background: #000;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
   overflow: hidden;
 }
 
 .slideshow-bg {
   position: absolute;
   inset: 0;
-
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-
-  /* very light dim so text is readable */
-  filter: brightness(0.75);
-
+  filter: brightness(0.85);
   transition: background-image 1.2s ease-in-out;
   z-index: 1;
 }
 
-/* LIGHT overlay for text readability */
+/* TRANSPARENT pink overlay (does NOT hide images) */
 .slideshow-page::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(255, 182, 193, 0.25);
   z-index: 2;
 }
 
-/* Text above everything */
 .overlay {
   position: relative;
   z-index: 3;
