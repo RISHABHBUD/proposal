@@ -5,7 +5,7 @@ const noMessages = [
   "Heyyy 🙈 don’t be shy",
   "Are you sure? 🥹",
   "My heart says YES 💖",
-  "Pariiii 😭",
+  "shivaniiii 😭",
   "Okay okay… I know it’s YES 😍"
 ];
 
